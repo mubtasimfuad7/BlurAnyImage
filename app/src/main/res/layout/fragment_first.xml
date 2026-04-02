@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/save_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/save_progress"
+            app:strokeColor="?attr/colorOutlineVariant"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="48dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_placeholder_image" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/label_blur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Blur Intensity"
+            android:textAppearance="?attr/textAppearanceLabelLarge"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_image" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_blur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:stepSize="1.0"
+            android:value="0.0"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            app:labelBehavior="withinBounds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_blur"
+            app:thumbColor="?attr/colorPrimary"
+            app:trackColorActive="?attr/colorPrimary"
+            app:trackColorInactive="?attr/colorSurfaceVariant" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_select"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/select_image"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_input_add"
+            app:layout_constraintEnd_toStartOf="@+id/button_save"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider_blur" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_save"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/save_image"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_select"
+            app:layout_constraintTop_toBottomOf="@id/slider_blur" />
+
+        <!-- Hidden button to keep the logic working if needed, or we can just update the code -->
+        <Button
+            android:id="@+id/button_blur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

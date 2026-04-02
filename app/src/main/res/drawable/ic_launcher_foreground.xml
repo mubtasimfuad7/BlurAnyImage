@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Camera/Lens Shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30c-13.25,0 -24,10.75 -24,24s10.75,24 24,24 24,-10.75 24,-24 -10.75,-24 -24,-24zM54,68c-7.73,0 -14,-6.27 -14,-14s6.27,-14 14,-14 14,6.27 14,14 -6.27,14 -14,14z" />
+
+    <!-- Blur Effect Representation (Glass/Steam) -->
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M70,40c2,0 4,2 4,4s-2,4 -4,4 -4,-2 -4,-4 2,-4 4,-4z" />
+    <path
+        android:fillColor="#4DFFFFFF"
+        android:pathData="M38,60c3,0 6,3 6,6s-3,6 -6,6 -6,-3 -6,-6 3,-6 6,-6z" />
+
+    <!-- Artistic Aperture Lines -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,40L54,34M64,44L69,39M68,54L74,54M64,64L69,69M54,68L54,74M44,64L39,69M40,54L34,54M44,44L39,39"
+        android:strokeWidth="2"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+</vector>
