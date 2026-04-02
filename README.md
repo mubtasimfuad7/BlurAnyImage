@@ -10,6 +10,13 @@ A professional, Material 3 Android application to apply high-quality real-time b
 - **Orientation Aware**: Automatically saves your work during screen rotations.
 - **Privacy First**: Saves images to a dedicated `Pictures/BlurredImages` folder.
 
+## 📱 App UI Screenshots
+
+<p align="center">
+  <img src="screenshots/screenshot1.png" width="300">
+  <img src="screenshots/screenshot2.png" width="300">
+</p>
+
 ## 📲 Installation
 You can download the ready-to-install APK from the `release/` folder in this repository.
 
